@@ -2,6 +2,7 @@ import { useState,useRef,useEffect  } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 function App() {
   const [listinp,setInp]=useState("")
@@ -37,7 +38,7 @@ function App() {
   return (
     <>
     <div>
-      <button onClick={()=>{setSkip(prevSkip => prevSkip - limit)}} disabled={skip===0}>Prev</button>
+      <button className='btn btn-danger' onClick={()=>{setSkip(prevSkip => prevSkip - limit)}} disabled={skip===0}>Prev</button>
       <button onClick={()=>{setSkip(prevSkip => prevSkip + limit)}} >Next</button>
       {
       data.products &&
